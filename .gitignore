@@ -1,4 +1,6 @@
 node_modules/
+lil hero/ 
+backwards/
 dist/
 build/
 .DS_Store

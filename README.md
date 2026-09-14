@@ -1,160 +1,100 @@
-## Electron App Template 
+## iPod Music Player
 
-**IMPORTANT:** Click & open README.md for full instruction. The preview gets cut off. 
+A simple desktop music player app with an iPod classic look, built with **Electron**. 
 
-A simple ElectronJS starter template for building desktop applications using HTML, CSS, and JavaScript.
-
-This repo is part of my YouTube tutorial on setting up your very first Electron desktop app. It’s designed to be simple, beginner-friendly, and easy to customize for any project.
-
+Play your local music files in a cute, frameless widget that sits on your desktop. 
 ---
 
-## Tutorial Video
+## What's Included 
 
-This repo is a part of my Youtube video tutorial on how to set up your very first desktop application. See the video here: https://www.youtube.com/watch?v=btxGSJ3Dh8E&t=373s
-
-This repo is only for the basic Electron template that you can clone to build whatever you want. But if you're interested in a beginner demonstration tutorial too, see this repositary for a simple Calendar Widget: https://github.com/nasha-wanich/little-calendar 
-
+- Play local audio files (MP3, WAV, OGG, M4A, FLAC, WEBM, OPUS, AAC)
+- Shows album art (looks for 'cover.jpg', 'folder.png', or an image named after the song)
+- Click wheel controls (menu, prev, next, play/pause, center)
+- Progress bar with click-and-drag seeking 
+- Keyboard shortcuts for quick control 
+- Frameless, non-resizable, transparent window that looks like a real iPod widget 
 ---
 
-## What’s Included
+## ✅ Before You Start
 
-- Basic Electron setup
-- Single window configuration
-- Frameless, non-resizable window
-- Draggable app window using CSS
-- Plain HTML / CSS / JavaScript (no frameworks)
-
-You can now customize the UI, add features, or turn this into any desktop app you want.
-
----
-
-## What this template is for 
-
-This template is great if you are:
-
-- New to ElectronJS
-- A designer or frontend developer exploring desktop apps
-- Building quick prototypes or side projects
-- Looking for a clean starting point without extra complexity
-
-If you’re looking for a guided beginner project after setting up this template, check out this calendar demo repo: https://github.com/nasha-wanich/little-calendar
-
----
-
-## Project Structure
-
-```
-electron-app-template
-├── node_modules
-├── main.js
-├──index.html
-├── styles.css
-├── script.js
-├── package.json
-└── package-lock.json
-```
-
-### Core Files Explained
-
-- **`main.js`**
-    
-    Electron’s main process. Creates the app window and loads the HTML file.
-    
-- **`index.html`**
-    
-    The main UI layout of your desktop app.
-    
-- **`styles.css`**
-    
-    Styles for your app UI, including draggable window behavior.
-    
-- **`script.js`**
-    
-    Frontend JavaScript logic for interactivity.
-    
-- **`package.json`**
-    
-    App configuration, dependencies, and run scripts.
-
-
----
-
-## Prerequisites
-
-Before using this template, make sure you have:
-
-- **Node.js**
-- **Homebrew** (macOS)
-- A code editor (VS Code recommended)
-
----
-
-## Step by step set up
-
-### 1. Install Package Managers (if you don’t have one on your computer)
-
-MacOS: Homebrew ([https://brew.sh](https://brew.sh/))
-
-Window: Chocolatey (https://chocolatey.org/install)
-
-### 2. Install Node.js
-
-You can install Node.js in two ways:
-
-### Option A: Use a package manager (mine is Homebrew which I used in the tutorial)
-
-```bash
-brew install node
-```
-
-Verify installation:
+You need **Node.js** installed on your computer. To check:
 
 ```bash
 node -v
 npm -v
 ```
-
-If both commands return version numbers, you’re good to go 
-
-### Option B: Download Installer
-
-Download Node.js directly from: https://nodejs.org
-
-and follow their installation instructions.
-
-
-### 3. Clone This Repo
-
-```bash
-gitclone https://github.com/nasha-wanich/electron-app-template.git
-cd electron-app-template
-```
-
-### 4. Install Dependencies
-
-```bash
-npm install
-```
-
-### 5. Run the App
-
-```bash
-npm run start
-```
-
-This will launch a simple Electron desktop window.
-
+If both print a version number, you're set. If not, download it from nodejs.org. 
 ---
 
-## Next Steps
+## Project Structure
 
-- Modify `index.html` to build your app layout
-- Style your app UI in `styles.css`
-- Add your app logic in `script.js`
-- Adjust window behavior in `main.js`  (ex. size, transparency etc.)
-
+```
+ipod-music-player/
+├── assets/            
+├── music/             
+├── main.js            
+├── preload.js         
+├── index.html        
+├── styles.css         
+├── script.js          
+├── package.json       
+└── README.md          
+```
 ---
 
-## Want a Beginner Walkthrough Project?
+## Keyboard Shortcuts
 
-If you want a step-by-step desktop app beginner tutorial, check out this repo where we build a calendar widget together: https://github.com/nasha-wanich/little-calendar
+| Key | Action |
+|-----|--------|
+| `Space` | Play / Pause |
+| `→` | Skip forward 5 seconds |
+| `←` | Skip back 5 seconds |
+| `↑` | Volume up |
+| `↓` | Volume down |
+| `N` | Next track |
+| `P` | Previous track |
+---
+
+## Setup
+
+### 1. Clone or download this project and open a terminal inside the folder.
+```bash 
+git clone https://github.com/cashmurb/ipod-music-player.git
+cd ipod-music-player
+``` 
+
+### 2. Install dependencies 
+
+```bash 
+npm install 
+```
+
+### 3. Run the App 
+```bash 
+npm run start 
+```
+A small iPod window should appear on your screen. 
+---
+
+## How to Use 
+
+1. Click the **"menu"** text on the click wheel (or the **center button**).
+2. A folder picker opens. Select a folder that contains your music.
+3. The first song starts playing automatically.
+4. Use the click wheel buttons:
+   - **⏮ Prev** — go to the previous track
+   - **⏭ Next** — skip to the next track
+   - **▶ / ❚❚ Play/Pause** — toggle playback
+   - **menu / center** — open the folder picker again
+5. Click or drag the thin bar at the bottom of the screen to seek.
+
+> **Tip:** Name your files like `Artist - Song Title.mp3` and the player will split them into artist and song name automatically.
+---
+
+## Credits 
+- Built on top of the electron-app-template by @nasha-wanich. 
+- Design inspired by the classic iPod. 
+---
+
+## License
+This project is for funsies. Enjoy!
