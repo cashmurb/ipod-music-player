@@ -3,6 +3,10 @@
 A simple desktop music player app with an iPod classic look, built with **Electron**. 
 
 Play your local music files in a cute, frameless widget that sits on your desktop. 
+
+
+![iPod Music Player demo](./assets/vscode-demo.png)
+![iPod Music Player demo](./assets/desktop-demo.png)
 ---
 
 ## What's Included 
